@@ -4,6 +4,8 @@ import tensorflow as tf
 import os
 import math
 import sys
+from datetime import datetime
+import csv
 
 # --- CONFIGURATION ---
 MODEL_PATH = "best_int8.tflite"
@@ -159,7 +161,9 @@ while True:
             
         else:
             # IT IS A NEW ANOMALY -> Save Image, Create New ID
-            filename = f"{OUTPUT_FOLDER}/anomaly_ID{next_object_id}_frame{frame_count}.jpg"
+            now = datetime.now()
+            file_timestamp = now.strftime("%Y%m%d_%H%M%S_%f")[:-3]
+            filename = f"{OUTPUT_FOLDER}/{file_timestamp}_anomaly_ID{next_object_id}_frame{frame_count}.jpg"
             
             # Save the frame
             save_img = display_frame.copy() 
