@@ -20,19 +20,25 @@ To ensure smooth, real-time performance without requiring heavy GPU resources du
 ### Installation:
 ```
 sudo apt update
-sudo apt install python3-opencv python3-tflite-runtime libatlas-base-dev libgl1-mesa-glx libglib2.0-0 libsm6 libxext6 libxrender-dev
+sudo apt install python3-opencv python3-tflite-runtime libatlas-base-dev libgl1-mesa-glx libglib2.0-0 libsm6 libxext6 libxrender-dev git
+cd $HOME
+git clone https://github.com/Sanjay-Raam/Bharat-AI-SoC.git
+mv Bharat-AI-Soc Anomaly
 ```
 
 ### Usage:
 #### Running Manually
 For verifying the model, run the script manually by
 ```
-python3 detect.py
+python3 $HOME/Anomaly/detect.py
 ```
 
 #### Running as a Background Daemon
 For continuous, hands-off deployment, the script is configured to run as a background service using systemd. This ensures the script starts automatically on boot, runs invisibly in the background, and restarts automatically if it encounters an error.
 ```
+cd $HOME/Anomaly
+sed -i "s/USER/$USER/g" anomaly.service
+sudo cp anomaly.service /etc/systemd/system
 sudo systemctl daemon-reload
 sudo systemctl enable anomaly.service
 sudo systemctl start anomaly.service
