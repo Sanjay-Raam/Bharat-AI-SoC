@@ -7,7 +7,7 @@ import math
 # --- CONFIGURATION ---
 MODEL_PATH = "best_int8.tflite"
 VIDEO_PATH = "vid2.mp4"
-OUTPUT_FOLDER = "pothole_detections"
+OUTPUT_FOLDER = "Detection_Logs"
 
 CONFIDENCE_THRESHOLD = 0.4
 NMS_THRESHOLD = 0.4
