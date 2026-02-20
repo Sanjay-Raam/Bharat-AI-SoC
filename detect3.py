@@ -3,11 +3,16 @@ import numpy as np
 import tensorflow as tf
 import os
 import math
+import sys
 
 # --- CONFIGURATION ---
 MODEL_PATH = "Anomaly/best_int8.tflite"
 VIDEO_PATH = "vid2.mp4"
 OUTPUT_FOLDER = "Detection_Logs"
+
+if len(sys.argv) == 3:
+    if sys.argv[1] == '-i':
+        VIDEO_PATH = sys.argv[2]
 
 CONFIDENCE_THRESHOLD = 0.4
 NMS_THRESHOLD = 0.4
