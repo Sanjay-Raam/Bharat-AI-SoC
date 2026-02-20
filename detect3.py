@@ -5,7 +5,7 @@ import os
 import math
 
 # --- CONFIGURATION ---
-MODEL_PATH = "best_int8.tflite"
+MODEL_PATH = "Anomaly/best_int8.tflite"
 VIDEO_PATH = "vid2.mp4"
 OUTPUT_FOLDER = "Detection_Logs"
 
