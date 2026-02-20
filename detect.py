@@ -7,7 +7,7 @@ import sys
 
 # --- CONFIGURATION ---
 MODEL_PATH = "Anomaly/best_int8.tflite"
-VIDEO_PATH = "vid2.mp4"
+VIDEO_PATH = "0"
 OUTPUT_FOLDER = "Detection_Logs"
 
 if len(sys.argv) == 3:
