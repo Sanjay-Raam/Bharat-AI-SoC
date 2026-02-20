@@ -23,7 +23,7 @@ sudo apt update
 sudo apt install python3-opencv python3-tflite-runtime libatlas-base-dev libgl1-mesa-glx libglib2.0-0 libsm6 libxext6 libxrender-dev git
 cd $HOME
 git clone https://github.com/Sanjay-Raam/Bharat-AI-SoC.git
-mv Bharat-AI-Soc Anomaly
+mv Bharat-AI-SoC Anomaly
 ```
 
 ### Usage:
