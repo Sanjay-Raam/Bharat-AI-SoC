@@ -9,7 +9,7 @@ import csv
 
 # --- CONFIGURATION ---
 MODEL_PATH = "best_int8.tflite"
-VIDEO_PATH = "0"
+VIDEO_PATH = 0
 OUTPUT_FOLDER = "Detection_Logs"
 
 if len(sys.argv) == 3:
