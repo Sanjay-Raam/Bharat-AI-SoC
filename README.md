@@ -28,9 +28,14 @@ mv Bharat-AI-Soc Anomaly
 
 ### Usage:
 #### Running Manually
-For verifying the model, run the script manually by
+For testing the model, input taken from Pi Camera, run the script
 ```
 python3 $HOME/Anomaly/detect.py
+```
+
+For testing the model, input taken from an input file, use -i flag
+```
+python3 $HOME/Anomaly/detect.py -i /path/to/input
 ```
 
 #### Running as a Background Daemon
