@@ -1,0 +1,15 @@
+[Unit]
+Description=Road Anomaly Detection
+After=network.target
+
+[Service]
+User=USER 
+WorkingDirectory=/home/USER/
+ExecStart=/usr/bin/python3 /home/USER/Anomaly/detect.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
